@@ -13,6 +13,48 @@
   <link rel="manifest" href="/assets/manifest.json">
   <link rel="stylesheet" href="/govuk-frontend.min.css">
   <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/i18next.min.js"></script>
+  <script type="module" src="/i18nextBrowserLanguageDetector.min.js"></script>
+  <script type="module">
+    function changeLanguage(language) {
+      i18next.changeLanguage(language, () => {
+        updateTexts();
+      });
+    }
+
+    function updateTexts() {
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        const translation = i18next.t(key);
+        if (translation && translation !== el.innerHTML) {
+          el.innerHTML = translation;
+        }
+      });
+    }
+
+    i18next
+      .use(i18nextBrowserLanguageDetector)
+      .init(
+        {
+          resources: {
+            cy: {
+              translation: {
+                "index.searchFilings": "Search Filings"
+              }
+            },
+            en: {
+              translation: {
+                "index.searchFilings": "Chwilio Ffeiliau"
+              }
+            }
+          },
+          fallbackLng: false,
+          load: 'languageOnly',
+          debug: true,
+        });
+
+    updateTexts();
+  </script>
 </head>
 
 <head th:fragment="head-admin">
