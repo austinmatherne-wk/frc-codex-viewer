@@ -23,11 +23,22 @@ jobs:
           cache: 'pip'
           check-latest: true
           python-version: 3.12
-      - name: Install dependencies
+      - name: Install python dependencies
         shell: bash
         run: |
           python -m pip install --upgrade pip setuptools wheel
           pip install tox tox-gh-actions
+      - uses: actions/setup-node@v4.1.0
+        with:
+          cache: 'npm'
+          check-latest: true
+          node-version: 22
+      - name: Install node dependencies
+        shell: bash
+        run: npm ci
+      - name: Check i18n Files Updated
+        shell: bash
+        run: npm run i18n-check
       - name: Test with tox
         shell: bash
         run: tox
@@ -64,7 +75,7 @@ jobs:
           cache: 'pip'
           check-latest: true
           python-version: 3.12
-      - name: Install dependencies
+      - name: Install python dependencies
         shell: bash
         run: python -m pip install --upgrade pip setuptools wheel
       - uses: actions/setup-node@v4.2.0
@@ -72,7 +83,7 @@ jobs:
           cache: 'npm'
           check-latest: true
           node-version: 22
-      - name: Install dependencies
+      - name: Install node dependencies
         shell: bash
         run: npm ci
       - name: Setup Chromium Sandbox
