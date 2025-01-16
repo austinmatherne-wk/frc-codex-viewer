@@ -1,0 +1,45 @@
+{
+  "dateFiled": {
+    "day": "",
+    "error": "",
+    "from": "",
+    "header": "",
+    "month": "",
+    "to": "",
+    "year": ""
+  },
+  "loadMore": "",
+  "maxResults": "",
+  "registry": {
+    "any": "",
+    "header": ""
+  },
+  "results": {
+    "companyNo": "",
+    "dateFiled": "",
+    "documentDate": "",
+    "downloads": {
+      "csv": {
+        "description": "",
+        "header": ""
+      },
+      "header": "",
+      "ixbrl": {
+        "description": "",
+        "header": ""
+      },
+      "json": {
+        "description": "",
+        "header": ""
+      },
+      "learnMore": "",
+      "openViewer": ""
+    },
+    "header": "",
+    "registry": ""
+  },
+  "searchButton": "",
+  "searchByNameOrNumber": "",
+  "whatXbrlDetails": "",
+  "whatXbrlSummary": ""
+}

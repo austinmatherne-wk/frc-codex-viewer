@@ -1,0 +1,67 @@
+{
+  "database": {
+    "companyName": "",
+    "completed": "",
+    "discovered": "",
+    "download": "",
+    "failed": "",
+    "filings": "",
+    "registry": "",
+    "status": "",
+    "stubViewer": "",
+    "unprocessed": ""
+  },
+  "fca": {
+    "download": "",
+    "filings": "",
+    "header": "",
+    "info": "",
+    "sequence": "",
+    "submitted": ""
+  },
+  "home": "",
+  "index": {
+    "configuration": {
+      "coho": {
+        "docApiUrl": "",
+        "infoApiUrl": "",
+        "rateLimiter": "",
+        "restApiKey": "",
+        "streamApiKey": "",
+        "streamApiUrl": ""
+      },
+      "fca": {
+        "dataApiUrl": "",
+        "searchApiUrl": ""
+      },
+      "header": ""
+    },
+    "logout": "",
+    "tests": {
+      "coho": {
+        "company": "",
+        "History": ""
+      },
+      "database": "",
+      "errorPage": "",
+      "fca": "",
+      "header": "",
+      "indexer": "",
+      "queue": ""
+    },
+    "tools": {
+      "header": "",
+      "reset": {
+        "button": "",
+        "header": "",
+        "placeholder": ""
+      }
+    }
+  },
+  "indexer": {
+    "status": ""
+  },
+  "queue": {
+    "header": ""
+  }
+}
